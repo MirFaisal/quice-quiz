@@ -1,10 +1,13 @@
-import React from "react";
+import "../../utility/currectAnswer";
+import { corruct } from "../../utility/currectAnswer";
 
-const Option = ({ option }) => {
+const Option = ({ option, correctAnswer }) => {
   return (
     <p
-      onClick={() => console.log(option)}
-      className="flex place-content-center w-8/12 p-7 text-xl text-white bg-blue-400 border border-transparent duration-300 ease-linear hover:bg-blue-500"
+      onClick={(e) => {
+        corruct(e, correctAnswer, option);
+      }}
+      className="flex place-content-center w-8/12 p-7 text-xl border border-blue-400 duration-300 ease-lineare"
     >
       {option}
     </p>

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Option from "./Option";
 
 const Quiz = ({ questions }) => {
-  const { question, options } = questions;
-//   console.log(questions);
+  const { question, options, correctAnswer } = questions;
+  //   console.log(questions.correctAnswer);
   return (
     <>
       <div className="card w-10/12 mx-auto relative mb-20 py-20 border border-blue-300 rounded-2xl">
@@ -12,7 +12,7 @@ const Quiz = ({ questions }) => {
         </div>
         <div className="options mx-auto grid grid-cols-2 justify-items-center gap-y-8">
           {options.map((option, ind) => (
-            <Option key={ind} option={option} />
+            <Option key={ind} option={option} correctAnswer={correctAnswer} />
           ))}
         </div>
       </div>
