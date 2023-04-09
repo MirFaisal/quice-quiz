@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Error from "./components/error/Error";
 import Quizs from "./components/quizs/Quizs";
+import Statistics from "./components/statistics/Statistics";
 import Topics from "./components/topics/Topics";
 import Layout from "./layout/Layout";
 import { topicsLoader } from "./loader/loader";
@@ -30,6 +31,11 @@ function App() {
               `https://openapi.programming-hero.com/api/quiz/${params.id}`
             );
           },
+        },
+        {
+          path: "/statistics",
+          element: <Statistics />,
+          loader: topicsLoader,
         },
       ],
     },

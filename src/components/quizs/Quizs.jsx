@@ -22,9 +22,9 @@ const Quizs = () => {
         </div>
         <div className=" fixed top-[300px] right-20 bg-blue-400 text-white p-8 rounded-lg">
           <p className="font-bold mb-5">total correct {totalCorrect} </p>
-          <p className="font-bold">
+          <div className="font-bold">
             <p className="font-bold mb-5">total wrong {totalWrong} </p>
-          </p>
+          </div>
         </div>
       </section>
     </>
